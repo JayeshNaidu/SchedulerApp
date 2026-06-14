@@ -1,0 +1,19 @@
+{
+  "name": "appointment-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Simple Express appointment scheduler demo.",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.16.3"
+  }
+}

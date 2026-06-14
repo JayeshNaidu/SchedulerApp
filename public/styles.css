@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 56px;
+}
+
+.hero {
+  margin-bottom: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  color: #111111;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.intro {
+  max-width: 58ch;
+  font-size: 1.05rem;
+}
+
+.panel {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.panel-header {
+  margin-bottom: 12px;
+}
+
+.panel-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+
+input,
+select,
+button,
+textarea {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+button {
+  border: 1px solid #111111;
+  border-radius: 4px;
+  padding: 12px 18px;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #ffffff;
+  color: #111111;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 12px;
+  border: 1px solid #d0d0d0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.appointments-table th {
+  font-weight: 700;
+}
+
+.empty-state {
+  padding: 16px;
+  border: 1px solid #d0d0d0;
+}
+
+.output {
+  margin: 0;
+  padding: 14px;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  overflow: auto;
+  font-family: "Courier New", monospace;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 16px;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(100% - 20px, 900px);
+    padding-top: 20px;
+  }
+
+  .panel {
+    padding: 16px;
+    border-radius: 8px;
+  }
+}

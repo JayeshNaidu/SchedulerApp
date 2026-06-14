@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Scheduler</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <nav class="nav-links">
+          <a href="/index.html">Book Appointment</a>
+          <a href="/admin.html">View Appointments</a>
+        </nav>
+        <p class="eyebrow">Express Demo</p>
+        <h1>Schedule an Appointment</h1>
+        <p class="intro">
+          Collect a customer name, email, appointment time, and service.
+        </p>
+      </section>
+
+      <section class="panel">
+        <form id="appointmentForm" class="form-grid">
+          <label>
+            Name
+            <input id="name" name="name" placeholder="Ava Patel" required />
+          </label>
+
+          <label>
+            Email
+            <input id="email" name="email" type="email" placeholder="ava@example.com" required />
+          </label>
+
+          <label>
+            Appointment Time
+            <input id="appointmentTime" name="appointmentTime" type="datetime-local" required />
+          </label>
+
+          <label>
+            Service
+            <select id="service" name="service" required>
+              <option value="product-demo">Product Demo</option>
+              <option value="technical-support">Technical Support</option>
+              <option value="sales-consultation">Sales Consultation</option>
+              <option value="onboarding-call">Onboarding Call</option>
+            </select>
+          </label>
+
+          <div class="actions">
+            <button type="submit">Create Appointment</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
