@@ -33,7 +33,7 @@ async function submitAppointment(event) {
   const notification = result.notification;
 
   if (notification?.sent) {
-    window.alert(`Appointment created for ${appointment.name}. Confirmation email triggered.`);
+    window.alert(`Appointment created for ${appointment.name}. Calendar event and confirmation email triggered.`);
   } else {
     window.alert(`Appointment created for ${appointment.name}.`);
   }

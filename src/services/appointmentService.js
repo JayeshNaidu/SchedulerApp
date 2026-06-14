@@ -18,8 +18,17 @@ export function createAppointmentService({ database, webhookService }) {
         createdAt: new Date().toISOString()
       };
 
+      const notification = await webhookService.checkAvailabilityAndCreateEvent(appointment);
+
+      if (!notification.available) {
+        const error = new Error(
+          notification.reason ?? "That appointment time is not available. Please choose another time."
+        );
+        error.statusCode = notification.reason ? 502 : 409;
+        throw error;
+      }
+
       await database.insertAppointment(appointment);
-      const notification = await webhookService.sendAppointmentCreated(appointment);
 
       return {
         appointment,

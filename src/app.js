@@ -22,7 +22,7 @@ export async function createApp() {
   app.use("/api", createAppointmentRouter({ appointmentService }));
 
   app.use((error, _request, response, _next) => {
-    response.status(500).json({
+    response.status(error.statusCode ?? 500).json({
       error: "internal_error",
       message: error.message
     });
