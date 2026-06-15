@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Simple Express appointment scheduler demo.",
+  "description": "Voice-enabled appointment scheduler demo with Express, Neon Postgres, n8n automation, LiveKit, and Twilio.",
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js"
