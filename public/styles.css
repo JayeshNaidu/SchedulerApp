@@ -4,9 +4,10 @@
 
 body {
   margin: 0;
-  background: #ffffff;
+  background: #f5f5f5;
   color: #111111;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
 }
 
 .page {
@@ -21,6 +22,7 @@ body {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 20px;
 }
@@ -28,10 +30,12 @@ body {
 .nav-links a {
   color: #111111;
   text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  border-bottom-color: #111111;
 }
 
 .eyebrow {
@@ -56,16 +60,19 @@ h1 {
 }
 
 .intro {
-  max-width: 58ch;
+  max-width: 54ch;
   font-size: 1.05rem;
+  color: #333333;
 }
 
 .panel {
+  width: min(100%, 640px);
   margin-top: 20px;
-  padding: 22px;
-  border: 1px solid #d0d0d0;
-  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
   background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .panel-header {
@@ -81,13 +88,13 @@ h1 {
 
 .form-grid {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
 label {
   display: grid;
   gap: 8px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 input,
@@ -100,10 +107,24 @@ textarea {
 input,
 select {
   width: 100%;
+  min-height: 48px;
   padding: 12px 14px;
-  border: 1px solid #bdbdbd;
-  border-radius: 4px;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
   background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input::placeholder {
+  color: #7a7a7a;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.08);
 }
 
 .actions {
@@ -114,16 +135,42 @@ select {
 
 button {
   border: 1px solid #111111;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 12px 18px;
-  background: #ffffff;
-  color: #111111;
+  background: #111111;
+  color: #ffffff;
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #222222;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.7;
 }
 
 button.secondary {
   background: #ffffff;
   color: #111111;
+}
+
+.status-message {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.status-success {
+  border-color: #cfcfcf;
+}
+
+.status-error {
+  border-color: #bdbdbd;
 }
 
 .table-wrap {
@@ -169,7 +216,7 @@ button.secondary {
 
 .card {
   padding: 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   background: #ffffff;
   border: 1px solid #d0d0d0;
 }

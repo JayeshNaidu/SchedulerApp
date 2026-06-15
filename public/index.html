@@ -21,39 +21,12 @@
       </section>
 
       <section class="panel">
-        <form id="appointmentForm" class="form-grid">
-          <label>
-            Name
-            <input id="name" name="name" placeholder="Ava Patel" required />
-          </label>
-
-          <label>
-            Email
-            <input id="email" name="email" type="email" placeholder="ava@example.com" required />
-          </label>
-
-          <label>
-            Appointment Time
-            <input id="appointmentTime" name="appointmentTime" type="datetime-local" required />
-          </label>
-
-          <label>
-            Service
-            <select id="service" name="service" required>
-              <option value="product-demo">Product Demo</option>
-              <option value="technical-support">Technical Support</option>
-              <option value="sales-consultation">Sales Consultation</option>
-              <option value="onboarding-call">Onboarding Call</option>
-            </select>
-          </label>
-
-          <div class="actions">
-            <button type="submit">Create Appointment</button>
-          </div>
-        </form>
+        <div id="app"></div>
       </section>
     </main>
 
-    <script type="module" src="/app.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
